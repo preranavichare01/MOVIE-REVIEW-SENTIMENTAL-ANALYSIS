@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Movie Review Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7; /* Light gray background */
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #007bff; /* Blue header text */
+        }
+        .result-box {
+            background-color: #f9f9f9; /* Light gray result box background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Dark gray header text */
+        }
+        .review {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px;
+            background-color: #fff; /* White background */
+        }
+        .sentiment {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .positive {
+            color: #28a745; /* Green for positive sentiment */
+        }
+        .negative {
+            color: #dc3545; /* Red for negative sentiment */
+        }
+        .emoji {
+            font-size: 32px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Movie Review Sentiment Analysis</h1>
+        <div class="result-box">
+            <h2>Review: {{ review }}</h2>
+            <h3 class="sentiment">
+                {% if sentiment == 'Positive' %}
+                    <span class="emoji">&#128512;</span> Positive
+                {% elif sentiment == 'Negative' %}
+                    <span class="emoji">&#128542;</span> Negative
+                {% else %}
+                    <span class="emoji">&#128528;</span> Neutral
+                {% endif %}
+            </h3>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
