@@ -27,4 +27,6 @@ cd movie-review-sentiment-analysis
 pip install -r requirements.txt
 
 
+Store html files in Templates folder in your local system
+
 
